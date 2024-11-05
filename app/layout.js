@@ -29,8 +29,8 @@ export default function RootLayout({ children }) {
   return (
     <AppProvider>
       <html lang="en">
-        <Header />
         <body className={`${poppins.className} ${arima.variable}`}>
+          <Header />
           {children}
         </body>
       </html>
