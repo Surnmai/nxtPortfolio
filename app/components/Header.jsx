@@ -51,10 +51,13 @@ const Header = () => {
 
         {/* nav Items  */}
         <nav>
-          <ul className="hidden md:flex gap-x-4 md:text-lg">
+          <ul className="hidden md:flex gap-x-4 text-lg md:text-2xl">
             {nav.map((item, idx) => {
               return (
-                <li key={idx} className="cursor-pointer hover:text-accent py-2">
+                <li
+                  key={idx}
+                  className="cursor-pointer hover:text-accent hover:transition-all duration-100 py-2"
+                >
                   {item.name}
                 </li>
               );
