@@ -20,6 +20,9 @@ import { RiBarChartHorizontalLine, RiCloseFill } from "react-icons/ri";
 // import next Image
 import Image from "next/image";
 
+// import components
+import NavMobile from "./NavMobile";
+
 const Header = () => {
   // window scroll event
   useEffect(() => {
@@ -40,7 +43,7 @@ const Header = () => {
         bg ? "bg-white shadow-lg py-5" : " py-9"
       }`}
     >
-      <div className="container flex justify-between items-center">
+      <div className="container flex justify-between items-center md:px-0">
         {/* Logo  */}
         <Link href="#" className="cursor-pointer">
           <Image src={Logo} alt="logo" />
@@ -48,14 +51,10 @@ const Header = () => {
 
         {/* nav Items  */}
         <nav>
-          <ul
-            className={`flex gap-x-4 flex-col justify-center items-center bg-accent absolute top-0 w-80 h-screen transition-all duration-300 ${
-              showNav ? "left-0" : "-left-full"
-            }`}
-          >
+          <ul className="hidden md:flex gap-x-4 md:text-lg">
             {nav.map((item, idx) => {
               return (
-                <li key={idx} className="cursor-pointer hover:text-white py-2">
+                <li key={idx} className="cursor-pointer hover:text-accent py-2">
                   {item.name}
                 </li>
               );
@@ -63,9 +62,12 @@ const Header = () => {
           </ul>
         </nav>
 
+        {/* NavMobile  */}
+        <NavMobile nav={nav} />
+
         {/* menu items  */}
         <div
-          className="lg:hidden cursor-pointer"
+          className="md:hidden cursor-pointer"
           onClick={() => setShowNav(!showNav)}
         >
           {showNav ? (
