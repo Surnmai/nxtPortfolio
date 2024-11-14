@@ -17,7 +17,7 @@ const NavMobile = ({ nav }) => {
           return (
             <li
               key={idx}
-              className="cursor-pointer hover:text-white hover:transition-all duration-100 py-2"
+              className="cursor-pointer hover:text-white hover:transition-all duration-100 py-2 capitalize"
             >
               {item.name}
             </li>
