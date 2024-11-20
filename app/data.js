@@ -29,21 +29,27 @@ import PortfolioImage5 from "./img/portfolio/p5.jpg";
 export const nav = [
   {
     name: "home",
+    path: "#home",
   },
   {
     name: "about",
+    path: "#about",
   },
   {
     name: "services",
+    path: "#services",
   },
   {
     name: "contributors",
+    path: "#contributors",
   },
   {
     name: "portfolio",
+    path: "#portfolio",
   },
   {
     name: "contact",
+    path: "#contact",
   },
 ];
 

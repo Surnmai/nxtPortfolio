@@ -24,6 +24,7 @@ const arima = Arima({
 
 // import components
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function RootLayout({ children }) {
   return (
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         <body className={`${poppins.className} ${arima.variable}`}>
           <Header />
           {children}
+          <Footer />
         </body>
       </html>
     </AppProvider>

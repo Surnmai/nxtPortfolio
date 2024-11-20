@@ -12,7 +12,8 @@ import { nav } from "../data";
 import Logo from "@/app/img/logo.svg";
 
 // import Link
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "react-scroll";
 
 // import icons
 import { RiBarChartHorizontalLine, RiCloseFill } from "react-icons/ri";
@@ -45,7 +46,7 @@ const Header = () => {
     >
       <div className="container flex justify-between items-center md:px-0">
         {/* Logo  */}
-        <Link href="#" className="cursor-pointer">
+        <Link to="home" smooth={true} className="cursor-pointer">
           <Image src={Logo} alt="logo" />
         </Link>
 
@@ -54,12 +55,19 @@ const Header = () => {
           <ul className="hidden md:flex gap-x-4 text-lg md:text-2xl">
             {nav.map((item, idx) => {
               return (
-                <li
+                <Link
+                  // href={item.path}
+                  to={item.name}
+                  activeClass="active"
+                  spy={true}
+                  smooth={true}
+                  offset={-71}
+                  duration={500}
                   key={idx}
-                  className="cursor-pointer hover:text-accent hover:transition-all duration-100 py-2"
+                  className="cursor-pointer hover:text-accent hover:transition-all hover:duration-500 py-2 transition-all"
                 >
                   {item.name}
-                </li>
+                </Link>
               );
             })}
           </ul>

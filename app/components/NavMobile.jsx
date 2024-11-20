@@ -1,6 +1,10 @@
 // import context
 import { useGlobalContext } from "../context";
 
+// import Link
+// import Link from "next/link";
+import { Link } from "react-scroll";
+
 const NavMobile = ({ nav }) => {
   const { showNav } = useGlobalContext();
 
@@ -15,12 +19,22 @@ const NavMobile = ({ nav }) => {
           //   console.log(item.name);
 
           return (
-            <li
+            // <li
+            //   key={idx}
+            //   className="cursor-pointer hover:text-white hover:transition-all duration-100 py-2 capitalize"
+            // >
+            //   {item.name}
+            // </li>
+            <Link
+              href={item.name}
+              activeClass="active"
+              spy={true}
+              // offset={-70}
               key={idx}
               className="cursor-pointer hover:text-white hover:transition-all duration-100 py-2 capitalize"
             >
               {item.name}
-            </li>
+            </Link>
           );
         })}
       </ul>

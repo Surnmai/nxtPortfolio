@@ -9,7 +9,10 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="section relative lg:before:content-pattern lg:before:absolute lg:before:top-[332px] lg:before:left-[180px] lg:after:content-rope lg:after:absolute lg:after:overflow-hidden lg:after:left-0 lg:after:right-0 lg:after:top-1/2 lg:after:flex lg:after:justify-center lg:after:items-center">
+    <section
+      className="section relative lg:before:content-pattern lg:before:absolute lg:before:top-[332px] lg:before:left-[180px] lg:after:content-rope lg:after:absolute lg:after:overflow-hidden lg:after:left-0 lg:after:right-0 lg:after:top-1/2 lg:after:flex lg:after:justify-center lg:after:items-center "
+      id="about"
+    >
       <div className="container">
         <h2 className="section-title">
           {about.title} <span className="dot"></span>
