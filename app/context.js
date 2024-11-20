@@ -7,8 +7,15 @@ export const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [bg, setBg] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  const [top, setTop] = useState(false);
+
+  const closeMenuBar = () => {
+    setShowNav(false);
+  };
   return (
-    <AppContext.Provider value={{ bg, setBg, showNav, setShowNav }}>
+    <AppContext.Provider
+      value={{ bg, setBg, showNav, setShowNav, top, setTop, closeMenuBar }}
+    >
       {children}
     </AppContext.Provider>
   );
