@@ -13,13 +13,10 @@ import { RiFileDownloadFill } from "react-icons/ri";
 const Hero = () => {
   return (
     <section
-      className="pt-[100px] bg-heroText bg-contain bg-center bg-no-repeat lg:bg-top font-primary"
+      className="section bg-heroText bg-contain bg-center bg-no-repeat lg:bg-top font-primary"
       id="home"
     >
-      <div
-        className="container lg:flex text-center lg:text-left xl:px-[100px] "
-        id="hero"
-      >
+      <div className="container lg:flex text-center lg:text-left xl:px-[100px]">
         {/* left hero  */}
         <div className="flex-1 lg:max-w-[558px] mt-12">
           <h3 className="text-[18px] font-semibold lg:text-xl mb-2 lg:mb-[50px]">
