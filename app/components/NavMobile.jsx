@@ -28,6 +28,18 @@ const NavMobile = ({ nav }) => {
     };
   }, [closeMenuBar, menuRef]);
 
+  useEffect(() => {
+    const closeOnScroll = () => {
+      return closeMenuBar();
+    };
+
+    window.addEventListener("scroll", closeOnScroll);
+
+    return () => {
+      window.removeEventListener("scroll", closeOnScroll());
+    };
+  }, []);
+
   return (
     <nav className="md:hidden" ref={menuRef}>
       <ul
