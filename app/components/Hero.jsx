@@ -20,7 +20,7 @@ const Hero = () => {
         {/* left hero  */}
         <div className="flex-1 lg:max-w-[558px] mt-12">
           <h3 className="text-[18px] font-semibold lg:text-xl mb-2 lg:mb-[50px]">
-            Hola! I'm
+            Hola! I&apos;m
           </h3>
           <h2 className="text-[24px] lg:text-[32px] font-semibold text-accent mb-4 lg:mb-5">
             SurNmai
