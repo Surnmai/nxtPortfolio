@@ -35,7 +35,7 @@ const ScrollToTop = () => {
         onClick={() => {
           scrollToTop();
         }}
-        className="btn bg-black hover:bg-black h-14 w-10 fixed bottom-[2%] right-[4%] z-50 transition-all"
+        className="btn bg-black hover:bg-black h-14 w-10 fixed bottom-[2%] right-[4%] z-50 transition-all duration-500"
       >
         <div className="text-3xl">
           <RiArrowUpSLine />
