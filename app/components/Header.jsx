@@ -62,7 +62,7 @@ const Header = () => {
                   spy={true}
                   smooth={true}
                   offset={-71}
-                  duration={500}
+                  duration={700}
                   key={idx}
                   className="cursor-pointer hover:text-accent hover:transition-all hover:duration-500 py-2 transition-all"
                 >
