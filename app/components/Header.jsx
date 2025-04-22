@@ -78,7 +78,7 @@ const Header = () => {
 
         {/* menu items  */}
         <div
-          className="md:hidden cursor-pointer"
+          className="md:hidden cursor-pointer z-50"
           onClick={() => setShowNav(!showNav)}
         >
           {showNav ? (
